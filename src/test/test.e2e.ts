@@ -5,7 +5,7 @@ describe('suite', () => {
 
     beforeEach(async () => {
         page = await newE2EPage({ html: `<test></test>`});
-        await page.waitForChanges();
+        console.log(page);
     });
 
     it('test', async () => {

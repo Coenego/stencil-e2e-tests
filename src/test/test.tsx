@@ -1,7 +1,8 @@
 import { Component } from '@stencil/core';
 
 @Component({
-    tag: 'test'
+    tag: 'test',
+    shadow: true
 })
 export class Test {
 
