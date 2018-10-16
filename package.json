@@ -6,6 +6,7 @@
     "build": "npm run clean && stencil build --prerender",
     "clean": "rimraf dist",
     "test": "npm run test:e2e",
+    "test:ci": "stencil test --e2e --ci",
     "test:e2e": "stencil test --e2e --headless"
   },
   "dependencies": {

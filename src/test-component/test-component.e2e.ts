@@ -1,7 +1,8 @@
-import {E2EPage, newE2EPage} from '@stencil/core/testing';
+import { E2EElement, E2EPage, newE2EPage} from '@stencil/core/testing';
 
 describe('suite', () => {
     let page: E2EPage;
+    let elm: E2EElement;
 
     beforeEach(async () => {
         page = await newE2EPage();
@@ -9,6 +10,7 @@ describe('suite', () => {
     });
 
     it('test', async () => {
-        expect(1).toBe(1);
+        elm = await page.find('test-component');
+        expect(elm).toBeTruthy();
     });
 });
