@@ -11,6 +11,6 @@ describe('suite', () => {
 
     it('test', async () => {
         elm = await page.find('test-component');
-        expect(elm).toBeTruthy();
+        expect(elm).toHaveClass('hydrated');
     });
 });
