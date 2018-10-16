@@ -4,8 +4,8 @@ describe('suite', () => {
     let page: E2EPage;
 
     beforeEach(async () => {
-        page = await newE2EPage({ html: `<test></test>`});
-        console.log(page);
+        page = await newE2EPage();
+        await page.setContent(`<test-component></test-component>`);
     });
 
     it('test', async () => {

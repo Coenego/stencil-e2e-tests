@@ -1,14 +1,14 @@
 import { Component } from '@stencil/core';
 
 @Component({
-    tag: 'test',
+    tag: 'test-component',
     shadow: true
 })
-export class Test {
+export class TestComponent {
 
     render() {
         return (
-            <div>bla</div>
+            <div class="test">bla</div>
         );
     }
 }
