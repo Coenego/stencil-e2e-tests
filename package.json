@@ -1,9 +1,12 @@
 {
   "name": "e2etest",
   "private": true,
+  "main": "dist/stencil-app.js",
   "scripts": {
+    "build": "npm run clean && stencil build --prerender",
+    "clean": "rimraf dist",
     "test": "npm run test:e2e",
-    "test:e2e": "stencil test --e2e"
+    "test:e2e": "stencil test --e2e --headless"
   },
   "dependencies": {
     "@stencil/core": "^0.14.0-5"
@@ -14,6 +17,7 @@
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "puppeteer": "1.8.0",
+    "rimraf": "^2.6.2",
     "typescript": "^3.1.3"
   }
 }

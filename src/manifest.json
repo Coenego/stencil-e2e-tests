@@ -1,0 +1,8 @@
+{
+  "name": "E2ETest",
+  "short_name": "E2ETest",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#16161d",
+  "theme_color": "#16161d"
+}

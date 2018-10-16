@@ -1,3 +1,4 @@
 .stencil
-www
+dist
 node_modules
+www
