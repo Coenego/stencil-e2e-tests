@@ -12,32 +12,32 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface TestComponent {}
-  interface TestComponentAttributes extends StencilHTMLAttributes {}
+  interface RenderingTest {}
+  interface RenderingTestAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'TestComponent': Components.TestComponent;
+    'RenderingTest': Components.RenderingTest;
   }
 
   interface StencilIntrinsicElements {
-    'test-component': Components.TestComponentAttributes;
+    'rendering-test': Components.RenderingTestAttributes;
   }
 
 
-  interface HTMLTestComponentElement extends Components.TestComponent, HTMLStencilElement {}
-  var HTMLTestComponentElement: {
-    prototype: HTMLTestComponentElement;
-    new (): HTMLTestComponentElement;
+  interface HTMLRenderingTestElement extends Components.RenderingTest, HTMLStencilElement {}
+  var HTMLRenderingTestElement: {
+    prototype: HTMLRenderingTestElement;
+    new (): HTMLRenderingTestElement;
   };
 
   interface HTMLElementTagNameMap {
-    'test-component': HTMLTestComponentElement
+    'rendering-test': HTMLRenderingTestElement
   }
 
   interface ElementTagNameMap {
-    'test-component': HTMLTestComponentElement;
+    'rendering-test': HTMLRenderingTestElement;
   }
 
 
