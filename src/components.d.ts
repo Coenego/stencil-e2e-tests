@@ -12,19 +12,34 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface CallbackTest {
+    'clickHandler': Function;
+  }
+  interface CallbackTestAttributes extends StencilHTMLAttributes {
+    'clickHandler'?: Function;
+  }
+
   interface RenderingTest {}
   interface RenderingTestAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'CallbackTest': Components.CallbackTest;
     'RenderingTest': Components.RenderingTest;
   }
 
   interface StencilIntrinsicElements {
+    'callback-test': Components.CallbackTestAttributes;
     'rendering-test': Components.RenderingTestAttributes;
   }
 
+
+  interface HTMLCallbackTestElement extends Components.CallbackTest, HTMLStencilElement {}
+  var HTMLCallbackTestElement: {
+    prototype: HTMLCallbackTestElement;
+    new (): HTMLCallbackTestElement;
+  };
 
   interface HTMLRenderingTestElement extends Components.RenderingTest, HTMLStencilElement {}
   var HTMLRenderingTestElement: {
@@ -33,10 +48,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'callback-test': HTMLCallbackTestElement
     'rendering-test': HTMLRenderingTestElement
   }
 
   interface ElementTagNameMap {
+    'callback-test': HTMLCallbackTestElement;
     'rendering-test': HTMLRenderingTestElement;
   }
 

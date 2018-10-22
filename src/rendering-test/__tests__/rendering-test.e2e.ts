@@ -7,8 +7,7 @@ describe('the component should', () => {
     let elm: E2EElement;
 
     beforeEach(async () => {
-        page = await newE2EPage();
-        await page.setContent(`<rendering-test></rendering-test>`);
+        page = await newE2EPage({ html: `<rendering-test></rendering-test>` });
     });
 
     it('render correctly', async () => {
