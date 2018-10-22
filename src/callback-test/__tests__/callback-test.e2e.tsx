@@ -15,6 +15,7 @@ describe('the component should', () => {
 
     it('executes the callback function', async () => {
         await elm.setProperty('clickHandler', () => { console.log('CALLBACK'); });
+        await page.waitForChanges();
 
         const HTMLButton = await page.find('callback-test >>> .button');
         await HTMLButton.click();
