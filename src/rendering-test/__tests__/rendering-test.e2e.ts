@@ -1,6 +1,6 @@
 import { E2EElement, E2EPage, newE2EPage} from '@stencil/core/testing';
 
-import { content } from '../test-component.types';
+import { content } from '../rendering-test.types';
 
 describe('the component should', () => {
     let page: E2EPage;
@@ -8,16 +8,16 @@ describe('the component should', () => {
 
     beforeEach(async () => {
         page = await newE2EPage();
-        await page.setContent(`<test-component></test-component>`);
+        await page.setContent(`<rendering-test></rendering-test>`);
     });
 
     it('render correctly', async () => {
-        elm = await page.find('test-component');
+        elm = await page.find('rendering-test');
         expect(elm).toHaveClass('hydrated');
     });
 
     it('display the correct text', async () => {
-        const $content = await page.find('test-component >>> .content');
+        const $content = await page.find('rendering-test >>> .content');
         expect($content.innerHTML).toStrictEqual(content);
     });
 });

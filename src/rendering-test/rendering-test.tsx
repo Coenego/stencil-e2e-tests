@@ -1,12 +1,12 @@
 import { Component } from '@stencil/core';
 
-import { content } from './test-component.types';
+import { content } from './rendering-test.types';
 
 @Component({
-    tag: 'test-component',
+    tag: 'rendering-test',
     shadow: true
 })
-export class TestComponent {
+export class RenderingTest {
 
     /**
      * Render the component
