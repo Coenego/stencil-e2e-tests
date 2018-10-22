@@ -18,5 +18,6 @@ describe('the component should', () => {
 
         const HTMLButton = await page.find('callback-test >>> .button');
         await HTMLButton.click();
+        await page.waitForChanges();
     });
 });
