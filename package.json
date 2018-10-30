@@ -11,7 +11,7 @@
     "test:e2e": "stencil test --e2e --headless"
   },
   "dependencies": {
-    "@stencil/core": "0.15.0"
+    "@stencil/core": "0.15.1"
   },
   "devDependencies": {
     "@stencil/utils": "0.0.5",
