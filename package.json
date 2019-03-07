@@ -16,7 +16,7 @@
   "devDependencies": {
     "@stencil/utils": "0.0.5",
     "@types/jest": "23.3.8",
-    "@types/puppeteer": "1.11.0",
+    "@types/puppeteer": "1.12.2",
     "jest": "23.6.0",
     "jest-cli": "^23.6.0",
     "jest-environment-node": "23.4.0",
